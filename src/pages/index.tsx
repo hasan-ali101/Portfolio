@@ -18,7 +18,7 @@ export default function Home() {
   const aboutPageRef = useRef(null);
 
   return (
-    <div>
+    <div className=" font-codeSaver">
       <Image
         className="h-screen w-screen fixed z-20 inset-0 object-cover opacity-50"
         src={"/clouds.jpg"}
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="relative flex flex-col md:flex-row w-screen h-full bg-backgroundA snap-always overflow-scroll snap-start">
           <div className="relative border h-screen w-full  ">
             <div
-              className=" block md:hidden cursor-pointer absolute z-50 w-full bottom-20 text-5xl text-center bg-blue-800 text-white"
+              className=" font-akira block md:hidden cursor-pointer absolute z-50 w-full bottom-20 text-5xl text-center bg-blue-800 text-white"
               onClick={() => {
                 console.log("clicked");
                 handleScroll(aboutPageRef.current);
