@@ -29,7 +29,7 @@ export default function Home() {
       />
 
       <div className=" snap-y snap-mandatory grid h-full w-full overflow-scroll scroll-smooth">
-        <div className="relative flex flex-col md:flex-row h-full bg-backgroundA snap-always overflow-scroll snap-start md:gap-8">
+        <div className="relative flex flex-col md:flex-row h-full bg-backgroundA snap-always overflow-scroll snap-start md:gap-12">
           <div className="relative min-h-screen w-full ">
             <div className="flex flex-col w-full pt-16 px-2 items-center">
               <div className="text-white font-akira text-4xl md:text-5xl lg:text-6xl  text-center">
@@ -48,9 +48,9 @@ export default function Home() {
                     height="100"
                   />
                 </div>
-                <ul className="text-white mb-8 z-50 md:mt-12 text-4xl text-center md:text-left flex flex-col gap-6">
+                <ul className="text-white mb-8 z-50 md:mt-12 text-4xl text-center md:text-left flex flex-col md:gap-6 gap-3">
                   <li
-                    className="cursor-pointer md:underline  underline-offset-4"
+                    className="p-1  border border-transparent md:border-white hover:border-white active:border-white cursor-pointer "
                     onClick={() => {
                       handleScroll(aboutPageRef.current);
                     }}
@@ -58,18 +58,22 @@ export default function Home() {
                     About
                   </li>
                   <li
-                    className="cursor-pointer"
+                    className="p-1 cursor-pointer border border-transparent hover:border-white active:border-white"
                     onClick={() => {
                       handleScroll(workPageRef.current);
                     }}
                   >
                     Work
                   </li>
-                  <li className="cursor-pointer pointer">Projects</li>
-                  <li className="cursor-pointer pointer">Contact</li>
+                  <li className="p-1  cursor-pointer pointer border border-transparent hover:border-white active:border-white">
+                    Projects
+                  </li>
+                  <li className=" p-1 cursor-pointer pointer border border-transparent hover:border-white active:border-white">
+                    Contact
+                  </li>
                 </ul>
               </div>
-              <div className="flex md:hidden absolute bottom-4 right-4 z-50  text-6xl opacity-60 text-white ">
+              <div className="flex md:hidden absolute bottom-2 right-4 z-50  text-6xl opacity-60 text-white ">
                 <BiSolidDownArrow
                   className="cursor-pointer animate-bounce"
                   onClick={() => {
@@ -82,10 +86,10 @@ export default function Home() {
 
           <div
             ref={aboutPageRef}
-            className="  min-h-screen bg-backgroundAB md:bg-backgroundA  w-full flex flex-col justify-center items-center"
+            className="  min-h-screen bg-backgroundAB md:bg-backgroundA mr-8  w-full flex flex-col justify-center items-center"
           >
-            <div className="text-white z-50 md:text-2xl text-3xl lg:text-3xl p-10 text-center md:p-4 lg:p-16 lg:mt-8">
-              <div className="text-white md:hidden z-50 mb-6 text-3xl underline-offset-4 underline">
+            <div className="text-white z-50 md:border  md:text-2xl text-3xl lg:text-3xl p-10 text-center md:p-4 lg:p-14">
+              <div className="text-white  md:hidden z-50 mb-6 text-3xl underline-offset-4 underline">
                 A bit about
               </div>
               Est soluta totam qui molestiae impedit sit consectetur repellendus
@@ -94,7 +98,7 @@ export default function Home() {
               blanditiis et odit similique et voluptas placeat et dolorum
             </div>
           </div>
-          <div className="hidden md:flex absolute bottom-4 right-4 z-50 text-6xl opacity-60  text-white">
+          <div className="hidden md:flex absolute bottom-2 right-4 z-50 text-6xl opacity-60  text-white">
             <BiSolidDownArrow
               className=" cursor-pointer animate-bounce"
               onClick={() => {
