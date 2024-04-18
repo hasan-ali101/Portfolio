@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useRef } from "react";
+import { BiSolidDownArrow } from "react-icons/bi";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,30 +29,78 @@ export default function Home() {
       />
 
       <div className=" snap-y snap-mandatory grid h-full w-full overflow-scroll scroll-smooth">
-        <div className="relative flex flex-col md:flex-row w-screen h-full bg-backgroundA snap-always overflow-scroll snap-start">
-          <div className="relative border h-screen w-full  ">
-            <div
-              className=" font-akira block md:hidden cursor-pointer absolute z-50 w-full bottom-20 text-5xl text-center bg-blue-800 text-white"
-              onClick={() => {
-                console.log("clicked");
-                handleScroll(aboutPageRef.current);
-              }}
-            >
-              Arrow
+        <div className="relative flex flex-col md:flex-row h-full bg-backgroundA snap-always overflow-scroll snap-start md:gap-8">
+          <div className="relative min-h-screen w-full ">
+            <div className="flex flex-col w-full pt-16 px-2 items-center">
+              <div className="text-white font-akira text-4xl md:text-5xl lg:text-6xl  text-center">
+                Hasan Ali
+              </div>
+              <div className="text-white font-akira text-lg md:text-xl lg:text-2xl text-center">
+                Front-end Developer
+              </div>
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                <div className="border-white border-opacity-40 border-8 h-44 w-44 z-40 relative flex justify-center items-center my-6 rounded-full ">
+                  <Image
+                    className=" border-8 opacity-90 border-opacity-80 border-white w-40 h-40 rounded-full overflow-clip"
+                    src={"/hasan.png"}
+                    alt="a photo of Hasan"
+                    width="100"
+                    height="100"
+                  />
+                </div>
+                <ul className="text-white mb-8 z-50 md:mt-12 text-4xl text-center md:text-left flex flex-col gap-6">
+                  <li
+                    className="cursor-pointer md:underline  underline-offset-4"
+                    onClick={() => {
+                      handleScroll(aboutPageRef.current);
+                    }}
+                  >
+                    About
+                  </li>
+                  <li
+                    className="cursor-pointer"
+                    onClick={() => {
+                      handleScroll(workPageRef.current);
+                    }}
+                  >
+                    Work
+                  </li>
+                  <li className="cursor-pointer pointer">Projects</li>
+                  <li className="cursor-pointer pointer">Contact</li>
+                </ul>
+              </div>
+              <div className="flex md:hidden absolute bottom-4 right-4 z-50  text-6xl opacity-60 text-white ">
+                <BiSolidDownArrow
+                  className="cursor-pointer animate-bounce"
+                  onClick={() => {
+                    handleScroll(aboutPageRef.current);
+                  }}
+                />
+              </div>
             </div>
           </div>
+
           <div
             ref={aboutPageRef}
-            className=" border h-screen bg-backgroundAB md:bg-backgroundA  w-full"
-          ></div>
-          <div
-            className="cursor-pointer absolute z-50 w-80 bottom-20 text-5xl text-center bg-black text-white"
-            onClick={() => {
-              console.log("clicked");
-              handleScroll(workPageRef.current);
-            }}
+            className="  min-h-screen bg-backgroundAB md:bg-backgroundA  w-full flex flex-col justify-center items-center"
           >
-            Arrow
+            <div className="text-white z-50 md:text-2xl text-3xl lg:text-3xl p-10 text-center md:p-4 lg:p-16 lg:mt-8">
+              <div className="text-white md:hidden z-50 mb-6 text-3xl underline-offset-4 underline">
+                A bit about
+              </div>
+              Est soluta totam qui molestiae impedit sit consectetur repellendus
+              et nostrum iure qui tempora voluptates eos perspiciatis quia! Non
+              molestiae iusto a deserunt velit quo quos repellendus et molestiae
+              blanditiis et odit similique et voluptas placeat et dolorum
+            </div>
+          </div>
+          <div className="hidden md:flex absolute bottom-4 right-4 z-50 text-6xl opacity-60  text-white">
+            <BiSolidDownArrow
+              className=" cursor-pointer animate-bounce"
+              onClick={() => {
+                handleScroll(workPageRef.current);
+              }}
+            />
           </div>
         </div>
         <div
