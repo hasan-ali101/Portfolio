@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        clouds: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-80%)" },
+        },
+      },
+      animation: {
+        clouds: "clouds linear 180s infinite alternate",
+        cloudsReverse: "clouds linear 180s infinite alternate-reverse",
+      },
       fontFamily: {
         akira: ["AKIRA", "sans-serif"],
         codeSaver: ["codeSaver"],
