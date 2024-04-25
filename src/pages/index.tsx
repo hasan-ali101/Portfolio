@@ -15,6 +15,9 @@ const handleScroll = (ref: any) => {
 
 export default function Home() {
   const { ref, inView } = useInView();
+  const { ref: arrowRef, inView: arrowInView } = useInView();
+  const { ref: arrowRef2, inView: arrow2InView } = useInView();
+  const { ref: arrowRef3, inView: arrow3InView } = useInView();
 
   const navPageRef = useRef<HTMLInputElement>(null);
   const workPageRef = useRef<HTMLInputElement>(null);
@@ -107,7 +110,7 @@ export default function Home() {
             className="relative flex flex-col justify-center md:flex-row h-full bg-backgroundA snap-always overflow-scroll snap-start md:gap-8 lg:gap-12"
           >
             <div className="max-w-[900px] relative min-h-screen  w-full flex items-center md:ml-6">
-              <div className="flex flex-col w-full pb-4 md:pb-12 pt-4 px-2 h-full md:h-fit items-center rounded-md border-2 bg-slate-400 bg-opacity-35 z-50">
+              <div className="flex flex-col w-full pb-4 md:pb-12 pt-4 px-2 h-full md:h-fit items-center rounded-md border-2 bg-slate-400 bg-opacity-35 z-40">
                 <div className="text-white  mt-4 font-akira text-4xl md:text-5xl lg:text-6xl text-center">
                   Hasan Ali
                 </div>
@@ -115,7 +118,7 @@ export default function Home() {
                   Front-end Developer
                 </div>
                 <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8 pr-4 ">
-                  <div className="border-white border-opacity-40 mt-12 border-8 h-44 w-44 z-40 relative flex justify-center items-center my-6 rounded-full ">
+                  <div className="border-white border-opacity-40 mt-12 border-8 h-44 w-44 z-30 relative flex justify-center items-center my-6 rounded-full ">
                     <Image
                       className=" border-8 opacity-70 border-opacity-80 border-white w-40 h-40 rounded-full overflow-clip"
                       src={"/hasan.png"}
@@ -178,7 +181,7 @@ export default function Home() {
               <div className="text-white md:hidden font-akira text-4xl md:text-5xl lg:text-4xl text-center">
                 About
               </div>
-              <div className="flex flex-col justify-start items-center text-white z-50 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
+              <div className="flex flex-col justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
                 <ReactTyped
                   strings={[
                     " Est soluta totam qui molestiae impedit sit consectetur repellendus et nostrum iure qui tempora voluptates eos perspiciatis quia! Non molestiae iusto a deserunt velit quo quos repellendus et molestiae blanditiis et odit similique et voluptas placeat et dolorum",
@@ -188,11 +191,22 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60  text-white">
+            <div
+              ref={arrowRef}
+              className="z-50 flex absolute bottom-16 md:bottom-2 right-4 text-6xl opacity-60  text-white"
+            >
               <BiSolidDownArrow
                 className=" cursor-pointer animate-bounce"
                 onClick={() => {
                   handleScroll(workPageRef.current);
+                }}
+              />
+            </div>
+            <div className="flex md:hidden absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+              <BiSolidDownArrow
+                className={`cursor-pointer ${arrowInView && "animate-rotate"}`}
+                onClick={() => {
+                  handleScroll(navPageRef.current);
                 }}
               />
             </div>
@@ -206,11 +220,22 @@ export default function Home() {
                 My Work
               </div>
             </div>
-            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white ">
+            <div
+              ref={arrowRef2}
+              className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white "
+            >
               <BiSolidDownArrow
                 className="cursor-pointer animate-bounce"
                 onClick={() => {
                   handleScroll(projectPageRef.current);
+                }}
+              />
+            </div>
+            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+              <BiSolidDownArrow
+                className={`cursor-pointer ${arrow2InView && "animate-rotate"}`}
+                onClick={() => {
+                  handleScroll(aboutPageRef.current);
                 }}
               />
             </div>
@@ -231,7 +256,10 @@ export default function Home() {
                 My Projects
               </div>
             </div>
-            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white">
+            <div
+              ref={arrowRef3}
+              className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white"
+            >
               <BiSolidDownArrow
                 className="cursor-pointer animate-bounce"
                 onClick={() => {
@@ -239,14 +267,30 @@ export default function Home() {
                 }}
               />
             </div>
+            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+              <BiSolidDownArrow
+                className={`cursor-pointer ${arrow3InView && "animate-rotate"}`}
+                onClick={() => {
+                  handleScroll(workPageRef.current);
+                }}
+              />
+            </div>
           </div>
           <div
-            className=" w-screen h-screen bg-backgroundD snap-start snap-always"
+            className="relative w-screen h-screen bg-backgroundD snap-start snap-always"
             ref={contactPageRef}
           >
             <div className="flex p-8 items-start justify-center">
               <div className="text-white  mt-10 font-akira text-4xl md:text-5xl lg:text-4xl text-center">
                 Get in touch
+              </div>
+              <div className="flex absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+                <BiSolidDownArrow
+                  className="cursor-pointer animate-rotate"
+                  onClick={() => {
+                    handleScroll(projectPageRef.current);
+                  }}
+                />
               </div>
             </div>
           </div>

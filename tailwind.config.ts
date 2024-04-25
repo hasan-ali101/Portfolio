@@ -17,11 +17,16 @@ const config: Config = {
           "0%": { transform: "scale(1.3) translatey(-30%)" },
           "100%": { transform: "scale(1) translatey(0%)" },
         },
+        rotate: {
+          "0%": { transform: "rotate(0deg) " },
+          "100%": { transform: "rotate(-180deg) translatey(100%)" },
+        },
       },
       animation: {
         clouds: "clouds linear 180s infinite alternate",
         cloudsFast: "clouds linear 80s infinite alternate",
         scaler: "scaler linear 1s infinite alternate",
+        rotate: "rotate linear 0.3s forwards",
       },
       fontFamily: {
         akira: ["AKIRA", "sans-serif"],
