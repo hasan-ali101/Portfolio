@@ -95,7 +95,7 @@ export default function Home() {
           height={100}
         />
         <Image
-          className={`h-screen w-[500%] opacity-50 z-10 absolute ${
+          className={`h-screen w-[500%] opacity-55 z-10 absolute ${
             inView && "animate-cloudsFast md:animate-clouds"
           } object-cover`}
           src={"/longClouds.jpg"}
@@ -105,20 +105,20 @@ export default function Home() {
         />
 
         <div ref={navPageRef} className="grid h-full w-screen overflow-scroll">
-          <div
-            ref={ref}
-            className="relative flex flex-col justify-center md:flex-row h-full bg-backgroundA snap-always overflow-scroll snap-start md:gap-8 lg:gap-12"
-          >
-            <div className="max-w-[900px] relative min-h-screen  w-full flex items-center md:ml-6">
+          <div className="relative flex flex-col justify-center md:flex-row h-full bg-backgroundA snap-always overflow-scroll snap-start md:gap-8 lg:gap-12">
+            <div
+              ref={ref}
+              className="max-w-[900px] relative min-h-screen  w-full flex items-center md:ml-6"
+            >
               <div className="flex flex-col w-full pb-4 md:pb-12 pt-4 px-2 h-full md:h-fit items-center rounded-md border-2 bg-slate-400 bg-opacity-35 z-40">
-                <div className="text-white  mt-4 font-akira text-4xl md:text-5xl lg:text-6xl text-center">
+                <div className="text-white animate-pulsate0  mt-4 font-akira text-4xl md:text-5xl lg:text-6xl text-center">
                   Hasan Ali
                 </div>
-                <div className="text-white font-akira text-lg md:text-xl lg:text-2xl text-center">
+                <div className="text-white animate-pulsate0 font-akira text-lg md:text-xl lg:text-2xl text-center">
                   Front-end Developer
                 </div>
-                <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8 pr-4 ">
-                  <div className="border-white border-opacity-40 mt-12 border-8 h-44 w-44 z-30 relative flex justify-center items-center my-6 rounded-full ">
+                <div className=" animate-pulsate0 flex flex-col md:flex-row items-start gap-4 md:gap-8 pr-4 ">
+                  <div className="border-white  border-opacity-40 mt-12 border-8 h-44 w-44 z-30 relative flex justify-center items-center my-6 rounded-full ">
                     <Image
                       className=" border-8 opacity-70 border-opacity-80 border-white w-40 h-40 rounded-full overflow-clip"
                       src={"/hasan.png"}
@@ -131,7 +131,7 @@ export default function Home() {
                     <li
                       className={`py-1 px-3 rounded-md border-2 ${
                         inView && " md:bg-white md:bg-opacity-20"
-                      }  transition-all md:hover:border-white hover:scale-110  active:border-white cursor-pointer hover:bg-white hover:bg-opacity-20`}
+                      } animate-pulsate transition-all md:hover:border-white hover:scale-110  active:border-white cursor-pointer hover:bg-white hover:bg-opacity-20`}
                       onClick={() => {
                         handleScroll(aboutPageRef.current);
                       }}
@@ -139,7 +139,7 @@ export default function Home() {
                       About
                     </li>
                     <li
-                      className="py-1 px-3 rounded-md cursor-pointer border-2 transition-all md:border-transparent hover:scale-110 border-white  md:hover:border-white hover:bg-white hover:bg-opacity-20 active:border-white"
+                      className="py-1 px-3 animate-pulsate2 rounded-md cursor-pointer border-2 transition-all md:border-transparent hover:scale-110 border-white  md:hover:border-white hover:bg-white hover:bg-opacity-20 active:border-white"
                       onClick={() => {
                         handleScroll(workPageRef.current);
                       }}
@@ -150,7 +150,7 @@ export default function Home() {
                       onClick={() => {
                         handleScroll(projectPageRef.current);
                       }}
-                      className="py-1 px-3 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 md:border-transparent border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
+                      className="py-1 px-3 animate-pulsate3 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 md:border-transparent border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
                     >
                       Projects
                     </li>
@@ -158,7 +158,7 @@ export default function Home() {
                       onClick={() => {
                         handleScroll(contactPageRef.current);
                       }}
-                      className="py-1 px-3 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 md:border-transparent border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
+                      className="py-1 px-3 animate-pulsate4 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 md:border-transparent border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
                     >
                       Contact
                     </li>
@@ -178,18 +178,25 @@ export default function Home() {
               ref={aboutPageRef}
               className="min-h-screen max-w-[900px] bg-backgroundAB md:bg-backgroundA px-2 md:pl-0 w-full flex flex-col gap-4 justify-center items-center"
             >
-              <div className="text-white md:hidden font-akira text-4xl md:text-5xl lg:text-4xl text-center">
+              <div className="text-white md:hidden font-akira text-4xl md:text-5xl lg:text-4xl text-center ">
                 About
               </div>
-              <div className="flex flex-col justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
+              <div className="w-full flex flex-col justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
                 <ReactTyped
                   strings={[
                     " Est soluta totam qui molestiae impedit sit consectetur repellendus et nostrum iure qui tempora voluptates eos perspiciatis quia! Non molestiae iusto a deserunt velit quo quos repellendus et molestiae blanditiis et odit similique et voluptas placeat et dolorum",
                   ]}
-                  typeSpeed={30}
-                  startWhenVisible
+                  typeSpeed={40}
+                  startDelay={inView ? 3000 : 100}
                 />
               </div>
+              {/* <div className="md:flex hidden flex-col justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
+                " Est soluta totam qui molestiae impedit sit consectetur
+                repellendus et nostrum iure qui tempora voluptates eos
+                perspiciatis quia! Non molestiae iusto a deserunt velit quo quos
+                repellendus et molestiae blanditiis et odit similique et
+                voluptas placeat et dolorum",
+              </div> */}
             </div>
             <div
               ref={arrowRef}

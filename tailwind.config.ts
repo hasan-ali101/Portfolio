@@ -21,12 +21,26 @@ const config: Config = {
           "0%": { transform: "rotate(0deg) " },
           "100%": { transform: "rotate(-180deg) translatey(100%)" },
         },
+        pulsate: {
+          "0%": { transform: "scale(1) " },
+          "50%": { transform: "scale(1.20)" },
+          "100%": { transform: "" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0.4", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         clouds: "clouds linear 180s infinite alternate",
         cloudsFast: "clouds linear 80s infinite alternate",
         scaler: "scaler linear 1s infinite alternate",
         rotate: "rotate linear 0.3s forwards",
+        pulsate0: "fadeIn linear 0.8s forwards",
+        pulsate: "pulsate linear 0.7s forwards 1s ",
+        pulsate2: "pulsate linear 0.7s forwards 1.5s ",
+        pulsate3: "pulsate linear 0.7s forwards 2s ",
+        pulsate4: "pulsate linear 0.7s forwards 2.5s ",
       },
       fontFamily: {
         akira: ["AKIRA", "sans-serif"],
