@@ -161,7 +161,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="flex md:hidden absolute bottom:6 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white ">
+                <div className="flex md:hidden absolute bottom-16 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white ">
                   <BiSolidDownArrow
                     className="cursor-pointer animate-bounce"
                     onClick={() => {
@@ -188,7 +188,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex absolute bottom:6 md:bottom-2 right-4 z-50 text-6xl opacity-60  text-white">
+            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60  text-white">
               <BiSolidDownArrow
                 className=" cursor-pointer animate-bounce"
                 onClick={() => {
@@ -206,7 +206,7 @@ export default function Home() {
                 My Work
               </div>
             </div>
-            <div className="flex absolute bottom:6 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white ">
+            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white ">
               <BiSolidDownArrow
                 className="cursor-pointer animate-bounce"
                 onClick={() => {
@@ -231,7 +231,7 @@ export default function Home() {
                 My Projects
               </div>
             </div>
-            <div className="flex absolute bottom:6 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white">
+            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-5xl opacity-60 text-white">
               <BiSolidDownArrow
                 className="cursor-pointer animate-bounce"
                 onClick={() => {
