@@ -13,10 +13,15 @@ const config: Config = {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-80%)" },
         },
+        scaler: {
+          "0%": { transform: "scale(1.3) translatey(-30%)" },
+          "100%": { transform: "scale(1) translatey(0%)" },
+        },
       },
       animation: {
         clouds: "clouds linear 180s infinite alternate",
-        cloudsReverse: "clouds linear 180s infinite alternate-reverse",
+        cloudsFast: "clouds linear 80s infinite alternate",
+        scaler: "scaler linear 1s infinite alternate",
       },
       fontFamily: {
         akira: ["AKIRA", "sans-serif"],
@@ -36,6 +41,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };
 export default config;
