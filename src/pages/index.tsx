@@ -187,7 +187,7 @@ export default function Home() {
                     " Est soluta totam qui molestiae impedit sit consectetur repellendus et nostrum iure qui tempora voluptates eos perspiciatis quia! Non molestiae iusto a deserunt velit quo quos repellendus et molestiae blanditiis et odit similique et voluptas placeat et dolorum",
                   ]}
                   typeSpeed={40}
-                  startDelay={inView ? 3000 : 100}
+                  startDelay={inView ? 3000 : 1500}
                 />
               </div>
               {/* <div className="md:flex hidden flex-col justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
