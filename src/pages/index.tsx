@@ -139,7 +139,7 @@ export default function Home() {
                       About
                     </li>
                     <li
-                      className="py-1 px-3 animate-pulsate2 rounded-md cursor-pointer border-2 transition-all md:border-transparent hover:scale-110 border-white  md:hover:border-white hover:bg-white hover:bg-opacity-20 active:border-white"
+                      className="py-1 px-3 animate-pulsate2 rounded-md cursor-pointer border-2 transition-all  hover:scale-110 border-white  md:hover:border-white hover:bg-white hover:bg-opacity-20 active:border-white"
                       onClick={() => {
                         handleScroll(workPageRef.current);
                       }}
@@ -150,7 +150,7 @@ export default function Home() {
                       onClick={() => {
                         handleScroll(projectPageRef.current);
                       }}
-                      className="py-1 px-3 animate-pulsate3 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 md:border-transparent border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
+                      className="py-1 px-3 animate-pulsate3 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110  border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
                     >
                       Projects
                     </li>
@@ -158,7 +158,7 @@ export default function Home() {
                       onClick={() => {
                         handleScroll(contactPageRef.current);
                       }}
-                      className="py-1 px-3 animate-pulsate4 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 md:border-transparent border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
+                      className="py-1 px-3 animate-pulsate4 rounded-md cursor-pointer pointer transition-all border-2 hover:scale-110 border-white  md:hover:border-white active:border-white hover:bg-white hover:bg-opacity-20"
                     >
                       Contact
                     </li>
