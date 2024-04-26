@@ -164,7 +164,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="flex md:hidden absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white ">
+                <div className="flex md:hidden absolute bottom-24  md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white ">
                   <BiSolidDownArrow
                     className="cursor-pointer animate-delayedBounce"
                     onClick={() => {
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
             <div
               ref={arrowRef}
-              className="z-50 flex absolute bottom-16 md:bottom-2 right-4 text-6xl opacity-60  text-white"
+              className="z-50 flex absolute bottom-24 md:bottom-2 right-4 text-6xl opacity-60  text-white"
             >
               <BiSolidDownArrow
                 className=" cursor-pointer animate-delayedBounce2"
@@ -211,7 +211,7 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="flex md:hidden absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+            <div className="flex md:hidden absolute bottom-24  md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
               <BiSolidDownArrow
                 className={`cursor-pointer ${arrowInView && "animate-rotate"}`}
                 onClick={() => {
@@ -231,7 +231,7 @@ export default function Home() {
             </div>
             <div
               ref={arrowRef2}
-              className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white "
+              className="flex absolute bottom-24  md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white "
             >
               <BiSolidDownArrow
                 className={`cursor-pointer ${
@@ -242,7 +242,7 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+            <div className="flex absolute bottom-24  md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
               <BiSolidDownArrow
                 className={`cursor-pointer ${arrow2InView && "animate-rotate"}`}
                 onClick={() => {
@@ -262,7 +262,7 @@ export default function Home() {
             </div>
             <div
               ref={arrowRef3}
-              className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white"
+              className="flex absolute bottom-24  md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white"
             >
               <BiSolidDownArrow
                 className={`cursor-pointer ${
@@ -273,7 +273,7 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="flex absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+            <div className="flex absolute bottom-24  md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
               <BiSolidDownArrow
                 className={`cursor-pointer ${arrow3InView && "animate-rotate"}`}
                 onClick={() => {
@@ -290,7 +290,7 @@ export default function Home() {
               <div className="text-white  mt-10 font-akira text-4xl md:text-5xl lg:text-4xl text-center">
                 Get in touch
               </div>
-              <div className="flex absolute bottom-16 md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
+              <div className="flex absolute bottom-24  md:bottom-2 right-4 z-40 text-6xl opacity-60  text-white">
                 <BiSolidDownArrow
                   className="cursor-pointer animate-rotate"
                   onClick={() => {
