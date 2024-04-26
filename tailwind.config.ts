@@ -33,7 +33,7 @@ const config: Config = {
       },
       animation: {
         clouds: "clouds linear 180s infinite alternate",
-        cloudsFast: "clouds linear 80s infinite alternate",
+        cloudsFast: "clouds linear 60s infinite alternate",
         scaler: "scaler linear 1s infinite alternate",
         rotate: "rotate linear 0.4s forwards",
         pulsate0: "fadeIn linear 0.4s forwards",
