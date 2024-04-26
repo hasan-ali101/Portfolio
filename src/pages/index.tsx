@@ -88,7 +88,7 @@ export default function Home() {
     <div className="w-full h-full overflow-x-clip">
       <div className="font-codeSaver w-[500%] relative overflow-x-clip">
         <Image
-          className="opacity-40 fixed object-cover z-20 h-screen"
+          className="opacity-40 w-full fixed object-cover z-20 h-screen"
           src={"/clouds.jpg"}
           alt="clouds"
           width={2000}
