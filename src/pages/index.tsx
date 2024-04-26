@@ -111,14 +111,14 @@ export default function Home() {
               className="max-w-[900px] relative min-h-screen  w-full flex items-center md:ml-6"
             >
               <div className="flex flex-col w-full pb-4 md:pb-12 pt-4 px-2 h-full md:h-fit items-center rounded-md border-2 bg-slate-400 bg-opacity-35 z-40">
-                <div className="text-white animate-pulsate0  mt-4 font-akira text-4xl md:text-5xl lg:text-6xl text-center">
+                <div className="text-white  mt-4 font-akira text-4xl md:text-5xl lg:text-6xl text-center">
                   Hasan Ali
                 </div>
-                <div className="text-white animate-pulsate0 font-akira text-lg md:text-xl lg:text-2xl text-center">
+                <div className="text-white font-akira text-lg md:text-xl lg:text-2xl text-center">
                   Front-end Developer
                 </div>
-                <div className=" animate-pulsate0 flex flex-col md:flex-row items-start gap-4 md:gap-8 pr-4 ">
-                  <div className="border-white  border-opacity-40 mt-12 border-8 h-44 w-44 z-30 relative flex justify-center items-center my-6 rounded-full ">
+                <div className="  flex flex-col md:flex-row items-start gap-4 md:gap-8 pr-4 ">
+                  <div className="border-white animate-pulsate0 border-opacity-40 mt-12 border-8 h-44 w-44 z-30 relative flex justify-center items-center my-6 rounded-full ">
                     <Image
                       className=" border-8 opacity-70 border-opacity-80 border-white w-40 h-40 rounded-full overflow-clip"
                       src={"/hasan.png"}
@@ -166,7 +166,7 @@ export default function Home() {
                 </div>
                 <div className="flex md:hidden absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white ">
                   <BiSolidDownArrow
-                    className="cursor-pointer animate-bounce"
+                    className="cursor-pointer animate-delayedBounce"
                     onClick={() => {
                       handleScroll(aboutPageRef.current);
                     }}
@@ -186,33 +186,26 @@ export default function Home() {
                   strings={[
                     " Est soluta totam qui molestiae impedit sit consectetur repellendus et nostrum iure qui tempora voluptates eos perspiciatis quia! Non molestiae iusto a deserunt velit quo quos repellendus et molestiae blanditiis et odit similique et voluptas placeat et dolorum",
                   ]}
-                  startDelay={3000}
-                  typeSpeed={40}
+                  startDelay={2500}
+                  typeSpeed={30}
                 />
               </div>
-              <div className="w-full flex flex-col md:hidden justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
+              <div className="w-full flex flex-col md:hidden justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-xl  xl:text-3xl p-10 md:p-4 lg:p-14">
                 <ReactTyped
                   strings={[
                     " Est soluta totam qui molestiae impedit sit consectetur repellendus et nostrum iure qui tempora voluptates eos perspiciatis quia! Non molestiae iusto a deserunt velit quo quos repellendus et molestiae blanditiis et odit similique et voluptas placeat et dolorum",
                   ]}
-                  typeSpeed={40}
+                  typeSpeed={30}
                   startWhenVisible
                 />
               </div>
-              {/* <div className="md:flex hidden flex-col justify-start items-center text-white z-40 border-2 transition-transform rounded-md min-h-[525px] bg-slate-400 bg-opacity-35 text-2xl  xl:text-3xl p-10 md:p-4 lg:p-14">
-                " Est soluta totam qui molestiae impedit sit consectetur
-                repellendus et nostrum iure qui tempora voluptates eos
-                perspiciatis quia! Non molestiae iusto a deserunt velit quo quos
-                repellendus et molestiae blanditiis et odit similique et
-                voluptas placeat et dolorum",
-              </div> */}
             </div>
             <div
               ref={arrowRef}
               className="z-50 flex absolute bottom-16 md:bottom-2 right-4 text-6xl opacity-60  text-white"
             >
               <BiSolidDownArrow
-                className=" cursor-pointer animate-bounce"
+                className=" cursor-pointer animate-delayedBounce2"
                 onClick={() => {
                   handleScroll(workPageRef.current);
                 }}
@@ -241,7 +234,9 @@ export default function Home() {
               className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white "
             >
               <BiSolidDownArrow
-                className="cursor-pointer animate-bounce"
+                className={`cursor-pointer ${
+                  arrow2InView && "animate-delayedBounce2"
+                }`}
                 onClick={() => {
                   handleScroll(projectPageRef.current);
                 }}
@@ -260,13 +255,6 @@ export default function Home() {
             className=" w-screen h-screen bg-backgroundC snap-start snap-always relative"
             ref={projectPageRef}
           >
-            {/* <Image
-              className={`h-screen opacity-40 z-20 absolute  right-0 left-0 object-cover`}
-              src={"/clouds.jpg"}
-              alt="clouds"
-              width={2000}
-              height={100}
-            /> */}
             <div className="flex p-8 items-start justify-center">
               <div className="text-white  mt-10 font-akira text-4xl md:text-5xl lg:text-4xl text-center">
                 My Projects
@@ -277,7 +265,9 @@ export default function Home() {
               className="flex absolute bottom-16 md:bottom-2 right-4 z-50 text-6xl opacity-60 text-white"
             >
               <BiSolidDownArrow
-                className="cursor-pointer animate-bounce"
+                className={`cursor-pointer ${
+                  arrow3InView && "animate-delayedBounce2"
+                }`}
                 onClick={() => {
                   handleScroll(contactPageRef.current);
                 }}
